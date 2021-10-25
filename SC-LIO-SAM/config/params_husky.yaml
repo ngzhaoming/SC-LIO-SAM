@@ -7,7 +7,7 @@ lio_sam:
   gpsTopic: "/odometry/gps"                   # GPS odometry topic from navsat, see module_navsat.launch file
 
   # Frames
-  lidarFrame: "base_link"                     # NOTE: Change to velodyne, but passed to lookupTransform argument target_frame does not exist
+  lidarFrame: "velodyne"                     # NOTE: Change to velodyne, but passed to lookupTransform argument target_frame does not exist
   baselinkFrame: "base_link"
   odometryFrame: "odom"
   mapFrame: "map"
@@ -40,13 +40,14 @@ lio_sam:
   imuRPYWeight: 0.01
 
   # Extrinsics (lidar -> IMU)
-  extrinsicTrans: [-0.1, 0.0, 0.0]
+  extrinsicTrans: [0.109, 0.0, -0.764]
   extrinsicRot: [1, 0, 0,
                   0, 1, 0,
                   0, 0, 1]
   extrinsicRPY: [1,  0, 0,
                  0, 1, 0,
                   0, 0, 1]
+  # extrinsicTrans: [1.77, 0.0, -0.05]                  
   # extrinsicRot: [1, 0, 0,
   #                 0, 1, 0,
   #                 0, 0, 1]
