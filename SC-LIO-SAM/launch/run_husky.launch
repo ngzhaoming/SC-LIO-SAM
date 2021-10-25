@@ -12,6 +12,9 @@
     <!-- Robot State Publisher is already executed in husky_simulation package -->
     <!-- <include file="$(find lio_sam)/launch/include/module_robot_state_publisher.launch" /> -->
 
+    <!-- Uncomment this to link chassis to base -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 chassis_link base_link" />
+
     <!--- Run Navsat -->
     <include file="$(find lio_sam)/launch/include/module_navsat.launch" />
 

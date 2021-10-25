@@ -7,7 +7,7 @@ lio_sam:
   gpsTopic: "/odometry/gps"                   # GPS odometry topic from navsat, see module_navsat.launch file
 
   # Frames
-  lidarFrame: "velodyne"
+  lidarFrame: "base_link"                     # NOTE: Change to velodyne, but passed to lookupTransform argument target_frame does not exist
   baselinkFrame: "base_link"
   odometryFrame: "odom"
   mapFrame: "map"
